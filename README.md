@@ -41,3 +41,7 @@ WI-FI蓝牙免驱
 
 ## 未解决的：
 睡眠死机
+
+
+![info](./image/1.png)
+![info](./image/2.png)
