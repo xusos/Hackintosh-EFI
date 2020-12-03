@@ -41,7 +41,30 @@ WI-FI蓝牙免驱
 
 ## 未解决的：
 睡眠死机
+独显未屏蔽
+触摸板（设置未识别，但可以使用）
+不能调整亮度
+
+###
 
 
 ![info](./image/1.png)
 ![info](./image/2.png)
+![info](./image/3.png)
+![info](./image/4.png)
+![info](./image/5.png)
+![info](./image/6.png)
+![info](./image/7.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
