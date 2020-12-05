@@ -206,7 +206,7 @@
 		<key>Timeout</key>
 		<integer>5</integer>
 		<key>DefaultVolume</key>
-		<string>MAC</string>
+		<string>MAC OS</string>
 	</dict>
 	<key>GUI</key>
 	<dict>
@@ -276,6 +276,10 @@
 		</dict>
 		<key>Audio</key>
 		<dict>
+			<key>ResetHDA</key>
+			<false/>
+			<key>AFGLowPowerState</key>
+			<false/>
 			<key>Inject</key>
 			<integer>1</integer>
 		</dict>
@@ -381,34 +385,34 @@
 		<key>#AddProperties</key>
 		<array>
 			<dict>
+				<key>Comment</key>
+				<string>hda-gfx=onboard-1 for HDMI audio</string>
+				<key>Value</key>
+				<data>b25ib2FyZC0xAA==</data>
+				<key>Key</key>
+				<string>hda-gfx</string>
 				<key>Device</key>
 				<string>IntelGFX</string>
-				<key>Value</key>
-				<data>b25ib2FyZC0xAA==</data>
-				<key>Comment</key>
-				<string>hda-gfx=onboard-1 for HDMI audio</string>
-				<key>Key</key>
-				<string>hda-gfx</string>
 			</dict>
 			<dict>
-				<key>Device</key>
-				<string>HDA</string>
-				<key>Value</key>
-				<data>b25ib2FyZC0xAA==</data>
 				<key>Comment</key>
 				<string>hda-gfx=onboard-1 for HDMI audio</string>
+				<key>Value</key>
+				<data>b25ib2FyZC0xAA==</data>
 				<key>Key</key>
 				<string>hda-gfx</string>
-			</dict>
-			<dict>
 				<key>Device</key>
 				<string>HDA</string>
-				<key>Value</key>
-				<data>AwAAAA==</data>
+			</dict>
+			<dict>
 				<key>Comment</key>
 				<string>layout-id=3</string>
+				<key>Value</key>
+				<data>AwAAAA==</data>
 				<key>Key</key>
 				<string>layout-id</string>
+				<key>Device</key>
+				<string>HDA</string>
 			</dict>
 			<dict>
 				<key>Key</key>
