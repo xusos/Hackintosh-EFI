@@ -154,53 +154,84 @@
 			</array>
 			<key>Fixes</key>
 			<dict>
-				<key>FixUSB</key>
-				<false/>
-				<key>FixDisplay</key>
-				<false/>
-				<key>Comment-IRQ Fix</key>
-				<string>The following fixes may be needed for onboard audio/USB/etc</string>
-				<key>FixHPET</key>
-				<false/>
-				<key>FakeLPC</key>
-				<false/>
-				<key>FixAirport</key>
-				<false/>
-				<key>FixTMR</key>
-				<false/>
+				<key>AddHDMI</key>
+				<true/>
 				<key>FixIntelGfx</key>
 				<false/>
+				<key>FixACST</key>
+				<true/>
+				<key>FakeLPC</key>
+				<false/>
+				<key>FixShutdown</key>
+				<true/>
+				<key>FixDisplay</key>
+				<true/>
+				<key>FixHPET</key>
+				<true/>
+				<key>FixAirport</key>
+				<false/>
+				<key>FixDarwin7</key>
+				<true/>
 				<key>FixRTC</key>
-				<false/>
-				<key>FixIPIC</key>
-				<false/>
+				<true/>
+				<key>AddPNLF</key>
+				<true/>
+				<key>FixS3D</key>
+				<true/>
+				<key>FixRegions</key>
+				<true/>
+				<key>FixLAN</key>
+				<true/>
+				<key>DeleteUnused</key>
+				<true/>
+				<key>AddDTGP</key>
+				<true/>
+				<key>FixSBUS</key>
+				<true/>
 				<key>FixSATA</key>
 				<false/>
-				<key>AddDTGP</key>
+				<key>FixTMR</key>
+				<true/>
+				<key>Comment-IRQ Fix</key>
+				<string>The following fixes may be needed for onboard audio/USB/etc</string>
+				<key>FixUSB</key>
+				<true/>
+				<key>FixWAK</key>
+				<true/>
+				<key>FixDarwin</key>
 				<false/>
-				<key>AddPNLF</key>
-				<false/>
-				<key>AddHDMI</key>
-				<false/>
+				<key>FixHDA</key>
+				<true/>
+				<key>FixADP1</key>
+				<true/>
+				<key>FixIPIC</key>
+				<true/>
 			</dict>
 			<key>DropOEM_DSM</key>
 			<false/>
 		</dict>
 		<key>AutoMerge</key>
 		<true/>
+		<key>RenameDevices</key>
+		<dict>
+			<key>#_SB.PCI0.RP01.PXSX</key>
+			<string>ARPT</string>
+		</dict>
 	</dict>
 	<key>Boot</key>
 	<dict>
-		<key>Secure</key>
-		<false/>
-		<key>NeverHibernate</key>
-		<true/>
 		<key>HibernationFixup</key>
 		<true/>
+		<key>Legacy</key>
+		<string>PBR</string>
+		<key>NeverHibernate</key>
+		<true/>
+		<key>Secure</key>
+		<false/>
 		<key>#DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>dart=0 nv_disable=1 debug=0x100 kext-dev-mode=1 -alcoff</string>
+		<string>dart=0 nv_disable=1 debug=0x100</string>
 		<key>XMPDetection</key>
 		<false/>
 		<key>Timeout</key>
@@ -266,6 +297,17 @@
 		</dict>
 		<key>Theme</key>
 		<string>BGM</string>
+	</dict>
+	<key>CPU</key>
+	<dict>
+		<key>C4</key>
+		<false/>
+		<key>HWPEnable</key>
+		<false/>
+		<key>C6</key>
+		<false/>
+		<key>C2</key>
+		<false/>
 	</dict>
 	<key>Devices</key>
 	<dict>
@@ -389,30 +431,30 @@
 				<string>IntelGFX</string>
 				<key>Value</key>
 				<data>b25ib2FyZC0xAA==</data>
-				<key>Comment</key>
-				<string>hda-gfx=onboard-1 for HDMI audio</string>
 				<key>Key</key>
 				<string>hda-gfx</string>
+				<key>Comment</key>
+				<string>hda-gfx=onboard-1 for HDMI audio</string>
 			</dict>
 			<dict>
 				<key>Device</key>
 				<string>HDA</string>
 				<key>Value</key>
 				<data>b25ib2FyZC0xAA==</data>
-				<key>Comment</key>
-				<string>hda-gfx=onboard-1 for HDMI audio</string>
 				<key>Key</key>
 				<string>hda-gfx</string>
+				<key>Comment</key>
+				<string>hda-gfx=onboard-1 for HDMI audio</string>
 			</dict>
 			<dict>
 				<key>Device</key>
 				<string>HDA</string>
 				<key>Value</key>
 				<data>AwAAAA==</data>
-				<key>Comment</key>
-				<string>layout-id=3</string>
 				<key>Key</key>
 				<string>layout-id</string>
+				<key>Comment</key>
+				<string>layout-id=3</string>
 			</dict>
 			<dict>
 				<key>Key</key>
@@ -478,7 +520,7 @@
 		<key>LoadVBios</key>
 		<true/>
 		<key>ig-platform-id</key>
-		<string>0x0d260007</string>
+		<string>0x0D260007</string>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
@@ -576,6 +618,20 @@
 				<key>InfoPlistPatch</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>Find</key>
+				<data>AQMDAwAAAAIAADABAABgAAAAAGA=</data>
+				<key>Name</key>
+				<string>AppleIntelFramebufferAzul</string>
+				<key>Replace</key>
+				<data>AQMDAwAAAAIAADABAACQAAAAAIA=</data>
+				<key>Disabled</key>
+				<false/>
+				<key>Comment</key>
+				<string>1536MB -&gt; 2048MB for HD4200_4400_4600 Mobile</string>
+				<key>InfoPlistPatch</key>
+				<false/>
+			</dict>
 		</array>
 		<key>KernelToPatch</key>
 		<array>
@@ -597,7 +653,7 @@
 				<key>Disabled</key>
 				<false/>
 				<key>Comment</key>
-				<string>0x0a260006 9MB cursor bytes (vbo), 2 ports only (RehabMan)</string>
+				<string>0x0d260007 9MB cursor bytes (vbo), 2 ports only (RehabMan)</string>
 			</dict>
 			<dict>
 				<key>Find</key>
@@ -657,7 +713,7 @@
 		<key>ChassisAssetTag</key>
 		<string>MacBook-Aluminum</string>
 		<key>PlatformFeature</key>
-		<string>0x1A</string>
+		<string>0</string>
 		<key>Family</key>
 		<string>MacBook Pro</string>
 		<key>ChassisManufacturer</key>
